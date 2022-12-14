@@ -8,7 +8,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <ctype.h>
-
+#include <string.h>
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -16,7 +16,7 @@
  * @next: points to the next element of the stack (or queue)
  * Description: doubly linked list node structure
  */
-typedef struck stack_s
+typedef struct stack_s
 {
 	int n;
 	struct stack_s *prev;
