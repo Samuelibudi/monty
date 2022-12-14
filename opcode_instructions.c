@@ -12,8 +12,8 @@ void _push(stack_t **doubly, unsigned int cline)
 
 	if (!vg.arg)
 	{
-		dprintf(2, "L%u: ", cline);
-		dprintf(2, "usage: push integer\n");
+		fprintf(stderr, "L%u: ", cline);
+		fprintf(stderr, "usage: push integer\n");
 		free_vg();
 		exit(EXIT_FAILURE);
 	}
@@ -22,8 +22,8 @@ void _push(stack_t **doubly, unsigned int cline)
 	{
 		if (!isdigit(vg.arg[j]) && vg.arg[j] != '-')
 		{
-			dprintf(2, "L%u: ", cline);
-			dprintf(2, "usage: push integer\n");
+			fprintf(stderr, "L%u: ", cline);
+			fprintf(stderr, "usage: push integer\n");
 			free_vg();
 			exit(EXIT_FAILURE);
 		}
