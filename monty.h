@@ -8,7 +8,6 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <ctype.h>
-#include <string.h>
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -70,6 +69,10 @@ void (*get_opcodes(char *opc))(stack_t **stack, unsigned int line_number);
 stack_t *add_dnodeint_end(stack_t **head, const int n);
 stack_t *add_dnodeint(stack_t **head, const int n);
 void free_dlistint(stack_t *head);
+
+char *_strtok(char *s, char *d);
+int _sch(char *s, char c);
+int _strcmp(char *s1, char *s2);
 
 /* main */
 void free_vg(void);
