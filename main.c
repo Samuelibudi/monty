@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
 	nlines = getline(&vg.buffer, &size, fd);
 	while (nlines != -1)
 	{
-		lines[0] = _strtok(vg.buffer, "\t\n");
+		lines[0] = strtok(vg.buffer, " \t\n");
 		if (lines[0] && lines[0][0] != '#')
 		{
 			f = get_opcodes(lines[0]);
@@ -85,7 +85,7 @@ int main(int argc, char *argv[])
 				free_vg();
 				exit(EXIT_FAILURE);
 			}
-			vg.arg = _strtok(NULL, "\t\n");
+			vg.arg = strtok(NULL, " \t\n");
 			f(&vg.head, vg.cont);
 		}
 		nlines = getline(&vg.buffer, &size, fd);

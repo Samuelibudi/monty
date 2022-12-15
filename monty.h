@@ -10,6 +10,7 @@
 #include <fcntl.h>
 #include <ctype.h>
 #include <stdarg.h>
+#include <string.h>
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
