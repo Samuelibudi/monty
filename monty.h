@@ -71,7 +71,7 @@ void _add(stack_t **stack, unsigned int line_number);
 void _nop(stack_t **stack, unsigned int line_number);
 void _sub(stack_t **stack, unsigned int line_number);
 void _div(stack_t **stack, unsigned int line_number);
-void _mul(stack_t **stack, unsigned int line_number);
+void _mul(stack_t **doubly, unsigned int cline);
 /*get functions*/
 void (*get_opcodes(char *opc))(stack_t **stack, unsigned int line_number);
 
@@ -80,9 +80,6 @@ stack_t *add_dnodeint_end(stack_t **head, const int n);
 stack_t *add_dnodeint(stack_t **head, const int n);
 void free_dlistint(stack_t *head);
 
-char *_strtok(char *s, char *d);
-int _sch(char *s, char c);
-int _strcmp(char *s1, char *s2);
 
 /* main */
 void free_vg(void);
