@@ -64,6 +64,7 @@ extern global_t vg;
 /* opcode instructions*/
 void _push(stack_t **stack, unsigned int line_number);
 void _pall(stack_t **stack, unsigned int line_number);
+void _pint(stack_t **stack, unsigned int line_number);
 
 /*get functions*/
 void (*get_opcodes(char *opc))(stack_t **stack, unsigned int line_number);
