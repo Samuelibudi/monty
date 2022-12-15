@@ -39,3 +39,25 @@ void _nop(stack_t **doubly, unsigned int cline)
 	(void)doubly;
 	(void)cline;
 }
+
+void _sub(stack_t **doubly, unsigned int cline)
+{
+	int m = 0;
+	stack_t *aux = NULL;
+
+	aux = *doubly;
+
+	for (; aux != NULL; aux = aux->next, m++)
+		;
+
+	if (m < 2)
+	{
+		fprintf(stderr, "L%u: can't sub, stack too short\n", cline);
+		free_vg();
+		exit(EXIT_FAILURE);
+	}
+
+	aux = (*doubly)->next;
+	aux->n -= (*doubly)->n;
+	_pop(doubly, cline);
+}
