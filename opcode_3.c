@@ -59,3 +59,31 @@ void _rotr(stack_t **doubly, unsigned int cline)
 	(*doubly)->prev = aux;
 	*doubly = aux;
 }
+
+/**
+ * _queue - sets the format of the data to a queue
+ * @doubly: head of linked list
+ * @cline: line number
+ * Return: nothing
+ */
+void _queue(stack_t **doubly, unsigned int cline)
+{
+	(void)doubly;
+	(void)cline;
+
+	vg.lifo = 0;
+}
+
+/**
+ * _stack - sets the format to the data to a stack
+ * @doubly: head oflinked list
+ * @cline: line number
+ * Return: nothing
+ */
+void _stack(stack_t **doubly, unsigned int cline)
+{
+	(void)doubly;
+	(void)cline;
+
+	vg.lifo = 1;
+}
